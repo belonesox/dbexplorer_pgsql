@@ -102,8 +102,8 @@ class Connection(object):
             parts.append("password='%s'" % self.password)
         if self.host and self.host != 'localhost':
             parts.append("host='%s'" % self.host)
-            if self.password:
-                parts.append("password='%s'" % self.password)
+        if self.port:
+            parts.append("port='%s'" % self.port)
         return " ".join(parts)
 
     def getConnectionDisplayValues(self):
